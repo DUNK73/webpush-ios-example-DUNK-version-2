@@ -1,0 +1,42 @@
+[
+    {
+        "endpoint": "https://fcm.googleapis.com/fcm/send/cOIKh_Lt_L0:APA91bFl58SL3W4ujCfEHrruNjTpvT0vVVsRuwK1GusimIUWfVj3mIemc7Gl0zBzfFmIzAeARzie_baLsQsjTnXC2vOT7OJSYO07ASdzYlDmReyFbnk3x8i9JMG4YVjsi6a5l4WueHLb",
+        "expirationTime": null,
+        "keys": {
+            "p256dh": "BByxwwr7k10Pbs-cNO-6SKKmwUpHDMb_vdkPsG1GXae5zsIH-Gv-zUYp7ZICzFttEq5tZsQE5V2TH5BkfI7RkJQ",
+            "auth": "KGe0gQRfA-_eMrOGN1SscQ"
+        }
+    },
+    {
+        "endpoint": "https://updates.push.services.mozilla.com/wpush/v2/gAAAAABnkASuFFYg0cde8uFh9NEG37ORSJwcwrLwMaSoHeNFAkZE6POokcGFo8jtGKyPqMHG05hD40LOwwDNA-kXb4AHhKE0iYjDxISZ7artdNOs88MYAe9KVR7qB7jeVMLLeD6r0pbe8i-ldPmd8w5OP0mhGK5VznvNnaj5sSS2UrhUE4ixS5Y",
+        "expirationTime": null,
+        "keys": {
+            "auth": "5bk7EwnreXjwr2VvrkNN0g",
+            "p256dh": "BMzBzs8XgrFBQmSZGNqgXSBrCQU1VQf_UBvnBaqLfnK1DP2MYMplOGiDzIP6BnbG2G7lJugw9b60PcJCHHimLV4"
+        }
+    },
+    {
+        "endpoint": "https://updates.push.services.mozilla.com/wpush/v2/gAAAAABnkAd0-2GFavyMR-pmOBTJqE8S64P4QM5sMK4jISHfeWlRcpQZcvc8oc-pU66j1fTkvL0LrlkvDArNWpWgqQXP3rp7dVE4K8WBrQ11uZ29uKbsuQxq80kzfnH7pGxFtj7SEVxtyJFds01WT3uJEh5ZF-mCGACwRQJmeVTlVogMfiX2SjE",
+        "expirationTime": null,
+        "keys": {
+            "auth": "9tmteQTN3MZGzB7AtDLYaA",
+            "p256dh": "BK3W6ad1eeXQegGoR2z3yoiNMmLdQFTuk5L-NDFYf52LI-CQfAhuIWEVkVxTqp8PUhiDWhS-cZHX5MoMN8A9FwE"
+        }
+    },
+    {
+        "endpoint": "https://fcm.googleapis.com/fcm/send/f-EZVkOUM9Q:APA91bFBQA06tDluA4hOXHFMcgqQja2HVk_V8c-AcO6_g5oz1MAba5GFQ5GxLMXT739IdfwR7dCj5DQwoQhtL8bOZeo0EHtdt7NNUIBDzp2FRfxCdN7jB7eQZUI8s5qZhj4yV-MFbnwe",
+        "expirationTime": null,
+        "keys": {
+            "p256dh": "BPLpNUcIhYqIyJm7E3uvyubILlj3fJ_kGCRhiyi3O0Ey1m_20nEpR5rjpgkCPuHsmd4xEgCrUo3rbGKJzJmnX4Q",
+            "auth": "AgUNVMdMylHp_Ptq83_Msg"
+        }
+    },
+    {
+        "endpoint": "https://fcm.googleapis.com/fcm/send/ebvQGTMN3AM:APA91bGiJpaUjTiX_1Fkcimp6jgbYntzyWF0MvKLPgug_x2N70v9UGlbYM-cplkMUWx7jo9jEJ_-KnSErlYDp995fjDxu9OqJytFvzvY2fTmVkGgm3RDhyT2H0RvRJAgKEm_Zg6f50Wd",
+        "expirationTime": null,
+        "keys": {
+            "p256dh": "BAfgR3wrqI1MTWXBDqHfe86AMMTE-H3FAuHJrqRA9FjeDfTqWOMpTWqf57vus4jDuYyKmM6jbw0TUBw13-B0058",
+            "auth": "FEDnqZeQu8syJMDHjMkESA"
+        }
+    }
+]

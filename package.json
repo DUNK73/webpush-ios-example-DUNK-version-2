@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "start-server-manager": "npx http-server server-front-manager",
+    "start-client-site": "npx http-server site",
+    "start-server": "node server/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "firebase": "^11.2.0",
+    "http-server": "^14.1.1",
+    "web-push": "^3.6.7"
+  }
+}

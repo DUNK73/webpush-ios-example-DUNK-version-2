@@ -1,0 +1,140 @@
+<html lang="en">
+
+<head>
+    <title>WebPush iOS example</title>
+    <!-- <base href="https://andreinwald.github.io/webpush-ios-example/"> -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png"> <!-- needed for phone PWA app icon -->
+    <style>
+        body {
+            background-color: #cfc7e2;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            padding-bottom: 50px;
+        }
+
+        .wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        @supports (-webkit-touch-callout: none) {
+            #scan-qr-code {
+                display: none;
+            }
+        }
+
+        #add-to-home-screen {
+            display: none;
+            background-color: bisque;
+            padding: 10px;
+        }
+
+        #add-to-home-screen img {
+            display: block;
+            margin: 0 auto;
+            padding-top: 10px;
+            max-height: 500px;
+            max-width: 100%
+        }
+
+        #scan-qr-code img {
+            display: block;
+            max-width: 100%
+        }
+
+        #subscribe_btn,
+        #test_send_btn {
+            display: none;
+            width: 100%;
+            line-height: 2;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        #active_sub {
+            display: none;
+            background-color: #e7e7ff;
+            padding: 20px;
+            word-wrap: break-word;
+        }
+
+        #source_link {
+            position: fixed;
+            bottom: 10px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>WebPush iOS example (client-front)</h1>
+
+        <div id="token"></div>
+
+    </div>
+
+    <!-- <script src="main.js"></script> -->
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBxb9FqiH6fjWGD-w1tlcU55eGBvfrHnLI",
+            authDomain: "web-push-2-55d19.firebaseapp.com",
+            projectId: "web-push-2-55d19",
+            storageBucket: "web-push-2-55d19.firebasestorage.app",
+            messagingSenderId: "212408452520",
+            appId: "1:212408452520:web:8a2e1b7f0ad5cffcc5c99d",
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+
+        import { getMessaging, getToken, onMessage } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-messaging.js";
+
+        const messaging = getMessaging(app);
+
+        let swRegistration = await navigator.serviceWorker.register('./firebase-messaging-sw.js', { scope: '/client-firebase/' })
+
+        getToken(messaging, { 
+            vapidKey: 'BGAB6B2kDBJxJBqguD5Z8dfeObhhA2KWt1BkIbmQzxEwCEb2o5KuOCaSNeVeXzNy3-Et9aK-hGxUpy4x9mUkqfQ',
+            serviceWorkerRegistration: swRegistration,
+         }).then((currentToken) => {
+            if (currentToken) {
+                // Send the token to your server and update the UI if necessary
+                // ...
+                document.getElementById("token").innerHTML = currentToken;
+
+            } else {
+                // Show permission request UI
+                console.log('No registration token available. Request permission to generate one.');
+                // ...
+            }
+        }).catch((err) => {
+            console.log('An error occurred while retrieving token. ', err);
+            // ...
+        });
+
+        onMessage(messaging, (payload) => {
+            console.log('Message received. ', payload);
+            // ...
+        });
+
+    </script>
+
+</body>
+
+</html>
